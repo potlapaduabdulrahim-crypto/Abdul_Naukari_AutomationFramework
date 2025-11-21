@@ -1,0 +1,117 @@
+{
+  "Full Name": "Abdul Rahim Potlapadu",
+  "Contact Information": {
+    "Phone": "+91 7675824906",
+    "Email": "potlapaduabdulrahim@gmail.com",
+    "Location": "Bengaluru, India",
+    "LinkedIn": ""
+  },"Additional Details": {
+    "Expected Salary": "8 LPA",
+    "Current Salary": "4.2 LPA",
+    "Date Of Birth": "11 January 1999",
+    "Current Location": "Bengaluru",
+    "PAN Card No": "xxxxxxxxx",
+    "Aadhar Card No": "XXXX XXXX XXXX",
+    "Total Experience": "2.5 years",
+    "Notice Period": "15 days",
+    "Preferred Location": ["Hyderabad", "Bengaluru", "Chennai"],
+    "Willing to Relocate": "Yes",
+    "Willing to Relocating": "Yes",
+    "Last Working Date": "30th October 2025",
+    "Last Working": "30th October 2025",
+    "Serving notice period": "Yes"
+
+},
+  "Professional Summary": "Python Automation Developer with 2.5 years of experience in designing scalable test automation frameworks for 5G SA FDD and Building Management Systems (BMS). Skilled in Python, Java, Selenium, AutoIt, Kubernetes, and BDD (Cucumber). Adept at Agile methodologies, Git version control, Test Automation, CI/CD, API Testing, Defect Tracking, Regression Testing, and Test Reporting. Proven ability to deliver robust automation solutions that improve test coverage, reduce costs, and enhance reliability.",
+  "Technical Skills": {
+    "Programming Languages": ["Python", "Java"],
+    "Version Control": ["Git (cloning, branching, merging, syncing)"],
+    "Frameworks & Libraries": ["Selenium", "Pytest", "Pywinauto", "Robot Framework", "Playwright", "NumPy", "Cucumber (BDD)"],
+    "Automation Tools": ["Kubernetes", "Wireshark", "JACOB", "AutoIt", "Pywinauto"],
+    "Testing Tools": ["MobaXterm", "Selenium WebDriver"],
+    "Database": ["MySQL", "NoSQL"],
+    "Protocols": ["UART", "CAN", "SPI", "I2C"],
+    "Operating Systems": ["Linux", "Windows"],
+    "Other Skills": [
+      "Automating desktop workflows using AutoIt and Python (Pywinauto)",
+      "Executing web UI automation including iframe handling and synchronization validation",
+      "Managing containerized test environments using Kubernetes",
+      "Participating in Agile ceremonies (daily stand-ups, sprint planning)",
+      "Developing simulator scripts and cost-effective automation solutions"
+    ]
+  },
+  "Professional Experience": [
+    {
+      "Company": "L&T Technology Services Pvt. Ltd.",
+      "Location": "Bengaluru, India",
+      "Projects": [
+        {
+          "Client": "Mavenir",
+          "Project": "Mavenir 5G Automation (Standalone)",
+          "Role": "Python Automation Developer",
+          "Responsibilities": [
+            "Automated 5G SA FDD network validation test cases using Mavenir’s proprietary Python framework",
+            "Managed Kubernetes-based test environments, ensuring stable pod and service orchestration",
+            "Conducted remote debugging and log analysis via MobaXterm",
+            "Implemented Git workflows for version control and test case integration",
+            "Collaborated during Agile ceremonies to refine requirements and improve test coverage",
+            "Gained deep insights into 5G SA call flows and network behavior for accurate validation"
+          ]
+        },
+        {
+          "Client": "Honeywell",
+          "Project": "Alerton – Building Management System (BMS)",
+          "Role": "QA Engineer (Manual & Automation Testing)",
+          "Responsibilities": [
+            "Designed and executed test cases for desktop, web, and controller-based applications",
+            "Built a Java + Cucumber (BDD) framework for maintainable test scripting",
+            "Automated desktop workflows using JACOB and AutoIt for non-inspectable UI elements",
+            "Developed Pywinauto scripts to replace licensed simulator tools, reducing costs",
+            "Validated synchronization between desktop apps, web UI, and controllers",
+            "Partnered with developers to resolve cross-platform issues and optimize performance"
+          ]
+        }
+      ]
+    }
+  ],
+  "Trainings & Certifications": {
+    "Embedded Systems – Vector India, Bengaluru": {
+      "Training Highlights": ["C Programming", "Embedded C", "C++", "Linux", "I2C", "SPI", "UART", "CAN", "LPC2129 Microcontroller", "ARM7 Architecture"],
+      "Mini Projects": [
+        "Preprocessor Using GCC Compiler",
+        "Data Acquisition System Using UART and SPI Protocols"
+      ]
+    },
+    "HackerRank Certifications": [
+      "Problem-Solving Skills",
+      "5-Star in Python Programming",
+      "4-Star in C Programming"
+    ]
+  },
+  "Achievements": [
+    "5-Star in Python Programming – HackerRank",
+    "4-Star in C Programming – HackerRank"
+  ],
+  "Education": [
+    {
+      "Degree": "B.Tech in Electronics and Communication Engineering",
+      "College": "Sai Tirumala NVR Engineering College, JNTU Narasaraopet, Andhra Pradesh",
+      "Year": "2016–2020",
+      "CGPA": "7.57",
+      "Mini Project": "Implementation of Industrial Monitoring Robot"
+    },
+    {
+      "Degree": "Intermediate (MPC)",
+      "College": "Krishnaveni Junior College, Vinukonda, Andhra Pradesh",
+      "Year": "2014–2016",
+      "Percentage": "89.2%"
+    },
+    {
+      "Degree": "Secondary School (SSC)",
+      "College": "Gitams High School, Vinukonda, Andhra Pradesh",
+      "Year": "2013–2014",
+      "CGPA": "9.7"
+    }
+  ],
+  "Declaration": "I hereby declare that the above-mentioned details are true to the best of my knowledge and belief."
+}
