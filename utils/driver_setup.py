@@ -1,40 +1,27 @@
 import os
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.firefox.service import Service as FirefoxService
-from selenium.webdriver.chrome.options import Options as ChromeOptions
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
 
 def get_driver():
-    """
-    Returns a WebDriver instance based on BROWSER environment variable.
-    Supports: chrome, firefox (default: chrome)
-    Automatically sets headless mode for CI/CD environments.
-    """
-    browser_name = os.getenv("BROWSER", "chrome").lower()
+    username = os.getenv("BROWSERSTACK_USERNAME")
+    access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 
-    if browser_name == "chrome":
-        options = ChromeOptions()
-        # Headless mode for CI/CD
-        if os.getenv("CI", "false") == "true":
-            options.add_argument("--headless=new")
-            options.add_argument("--no-sandbox")
-            options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--start-maximized")
+    capabilities = {
+        "browserName": "Chrome",
+        "browserVersion": "latest",
+        "bstack:options": {
+            "os": "Windows",
+            "osVersion": "11",
+            "local": "false",
+            "seleniumVersion": "4.21.0",
+            "sessionName": "Naukri Automation CI Run"
+        }
+    }
 
-        service = ChromeService(ChromeDriverManager().install())
-        driver = webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Remote(
+        command_executor=f"https://{username}:{access_key}@hub.browserstack.com/wd/hub",
+        options=webdriver.ChromeOptions(),
+        desired_capabilities=capabilities
+    )
 
-    elif browser_name == "firefox":
-        options = FirefoxOptions()
-        if os.getenv("CI", "false") == "true":
-            options.add_argument("--headless")
-        service = FirefoxService(GeckoDriverManager().install())
-        driver = webdriver.Firefox(service=service, options=options)
-
-    else:
-        raise ValueError(f"Unsupported browser: {browser_name}")
-
+    driver.maximize_window()
     return driver

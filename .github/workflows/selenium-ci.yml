@@ -1,24 +1,18 @@
-name: Selenium Naukari Pytest Automation CI/CD
+name: Selenium Naukri Pytest Automation CI/CD (BrowserStack)
 
 on:
   push:
     branches:
       - main
-      - naukari_automation_ci   # Your clean CI branch
+      - naukari_automation_ci
   pull_request:
     branches:
       - main
-  workflow_dispatch:        # manual trigger button
-  schedule:
-    - cron: "0 */6 * * *"   # run every 6 hours
+  workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        browser: [chrome, firefox]
 
     steps:
     - name: Checkout code
@@ -27,7 +21,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: "3.10"   # Selenium recommended stable version
+        python-version: "3.10"
 
     - name: Install dependencies
       run: |
@@ -35,17 +29,17 @@ jobs:
         pip install -r utils/requirements.txt
         pip install webdriver-manager
 
-    - name: Run Selenium Login Test Only   # debugging only login
+    - name: Run Selenium Tests on BrowserStack
       env:
-        BROWSER: ${{ matrix.browser }}
+        BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+        BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
       run: |
-        echo "Running LOGIN test on $BROWSER"
-        export PYTHONPATH=$PYTHONPATH:$(pwd)
-        pytest -v tests/test_login.py --html=report.html
+        echo "Running tests on BrowserStack..."
+        pytest -v tests/ --html=report.html
 
-    - name: Upload HTML Report
+    - name: Upload Test Report
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: login-html-report-${{ matrix.browser }}
+        name: browserstack-report
         path: report.html
