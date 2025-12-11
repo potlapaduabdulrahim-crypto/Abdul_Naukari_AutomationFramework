@@ -30,6 +30,11 @@ class LoginPage:
         WebDriverWait(self.driver, 30).until(
             lambda d: d.execute_script("return document.readyState") == "complete"
         )
+        self.driver.delete_all_cookies()
+        self.driver.add_cookie({"name": "country", "value": "IN"})
+        self.driver.add_cookie({"name": "geo", "value": "IN"})
+        self.driver.add_cookie({"name": "userLang", "value": "en"})
+        self.driver.get(config.BASE_URL)  # reload after cookie inject
 
         logger.info("Page fully loaded.")
 

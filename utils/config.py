@@ -1,6 +1,6 @@
 USERNAME = "potlapaduabdulrahim@gmail.com"
 PASSWORD = "Nafirahim#@240125"
-BASE_URL = "https://www.naukri.com/"
+BASE_URL = "https://www.naukri.com/mnjuser/login"
 SKILL_COMPANY_DESIGNATION="Python"
 Location="Hyderabad"
 PAGES_TO_APPLY=1
