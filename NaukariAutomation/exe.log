@@ -1,0 +1,3812 @@
+(.venv) PS C:\Users\USER\PycharmProjects\NaukariAutomation> pytest .\tests\test_searchAndApply.py
+============================================================ test session starts =============================================================
+platform win32 -- Python 3.13.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: C:\Users\USER\PycharmProjects\NaukariAutomation
+plugins: anyio-4.11.0, langsmith-0.4.33
+collected 1 item
+
+tests\test_searchAndApply.py F                                                                                                          [100%]
+
+================================================================== FAILURES ==================================================================
+__________________________________________________________ test_profile_navigation ___________________________________________________________
+
+driver = <selenium.webdriver.chrome.webdriver.WebDriver (session="4fe98a2cbf6ca2d35c5d47bcddce68ab")>
+
+    def test_profile_navigation(driver):
+        LoginPage(driver).login()
+        SearchPage(driver).Search_Matching_Postion()
+        # SearchPage(driver).ApplySearch()
+        SearchPage(driver).ApplyPages(10)
+        search_page = SearchPage(driver)
+        logger.info(f"Total jobs Notifications Available in the page: {search_page.total_notifications}")
+        logger.info(f"Total jobs tried for apply: {search_page.tried_for_apply_job_count}")
+>       assert search_page.applied_count > 0, "❌ No jobs were applied successfully. Check ApplySearch or ClickDirectApply logic."
+E       AssertionError: ❌ No jobs were applied successfully. Check ApplySearch or ClickDirectApply logic.
+E       assert 0 > 0
+E        +  where 0 = <pages.search_page.SearchPage object at 0x000002BCDAF65A90>.applied_count
+
+tests\test_searchAndApply.py:11: AssertionError
+------------------------------------------------------------ Captured stdout call ------------------------------------------------------------
+
+🔹 Processing page 1 of 10
+📢 Total loaded job cards: 22
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Python Developer
+Clerro Technologies
+0 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Python Backend Engineer
+Ascendeum
+3.825 Reviews
+1 - 3 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Automation Engineer
+Amgen Inc
+3.238 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: Software Engineer (Python)
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Senior Backend Engineer - Pythons
+Iletexy
+1 - 3 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #5: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Lead Software Engineer - Python
+JPMorgan Chase Bank
+3.87148 Reviews
+Employees' choice
+0 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 6 days ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Software Engineer II - Python
+JPMorgan Chase Bank
+3.87148 Reviews
+Employees' choice
+2 - 7 years
+Not Disclosed
+Bengaluru, Hyderabad, Ahmedabad
+Send me jobs like this
+Posted: Few hours ago
+Openings: 1
+Applicants: 14
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+⚠️ Skipping job #8 due to 'Filter jobs by' detected
+📢 Total loaded job cards: 22
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Applied AI ML Associate-Python, React
+JPMorgan Chase Bank
+3.87148 Reviews
+Employees' choice
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+You have already applied
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: Software Engineer
+Smiths
+3.913 Reviews
+1 - 3 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Associate Software Engineer
+Amgen Inc
+3.238 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+⚠️ Skipping job #12 due to 'Filter jobs by' detected
+📢 Total loaded job cards: 22
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Software Engineer- RPA (UiPath & Automation Anywhere)
+Allscripts(India) LLP, ultimately a subsidiary of Altera Digital Health Inc.,[Al...
+3.8714 Reviews
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Associate Software Engineer
+Amgen Inc
+3.238 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Associate Software Engineer
+Amgen Inc
+3.238 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Associate Software Engineer - Large Molecule Discovery
+Amgen Inc
+3.238 Reviews
+1 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Associate Data Engineer - R&D Omics
+Amgen Inc
+3.238 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Full Stack Developer - Python, Node with React JS
+International IT Companies
+Posted by White Horse Manpower Consultancy
+2 - 7 years
+4-8 Lacs P.A.
+Bengaluru, Hyderabad, Pune
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 100
+Applicants: 100+
+Applied
+You have already applied
+❌ No Apply button found.
+❌ Failed to apply job #18
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: Associate software engineer
+Amgen Inc
+3.238 Reviews
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Software Development Engineer III
+Medblocks Technologies
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #21
+👉 Switched to new job tab
+Visible text: Associate Software Engineer
+Amgen Inc
+3.238 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #21: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+🟢 Opened job #22
+👉 Switched to new job tab
+Visible text: NLP - Senior Analyst / Data Scientist
+360DigiTMG
+3.991 Reviews
+2 - 6 years
+Not Disclosed
+Bengaluru, Hyderabad, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #22: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 22
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 2
+
+🔹 Processing page 2 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Software Development Engineer - Test ii
+Amgen Inc
+3.238 Reviews
+1 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Python Developer
+Curian Software Services
+4.911 Reviews
+2 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Python Django Developer
+The Career Company
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: Software Engineer - Python
+Tapad
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Remote Software Development Engineer In Test
+Pelago by Singapore Airlines
+2 - 6 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #5: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Software Engineer II - Python, AI/ML
+JPMorgan Chase Bank
+3.87148 Reviews
+Employees' choice
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Python Developer
+Pixelstat Esolutions Development
+3.45 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Software Engineer (Python)
+Infor
+4.0631 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Software Engineer (Python)
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: Sr. Python Developer
+Exponential Ai Software Services
+4.93 Reviews
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Associate Data Engineer-Research Data and Analytics
+Amgen Inc
+3.238 Reviews
+0 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Software Engineer - Backend Data Engineering (Python)
+valmi.io
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #12: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Software Engineering Intern, Summer 2026
+Google
+4.41824 Reviews
+0 - 3 years
+Not Disclosed
+Bengaluru, Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Backend Engineer
+Aidaptive
+1 - 2 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Associate Software Developer
+Examroomai India
+3.076 Reviews
+1 - 2 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Data Scientist
+Amgen Inc
+3.238 Reviews
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Engineer, Camera Software
+Qualcomm
+3.71095 Reviews
+0 - 2 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 5 days ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Senior Data Scientist
+Grid Dynamics
+3.066 Reviews
+1 - 4 years
+Not Disclosed
+Bengaluru, Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: NLP - Senior Analyst / Data Scientist
+360DigiTMG
+3.991 Reviews
+2 - 6 years
+Not Disclosed
+Bengaluru, Hyderabad, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Fullstack Engineer
+Inorg
+4.561 Reviews
+2 - 6 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 3
+
+🔹 Processing page 3 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Engineer - PMIC SW
+Qualcomm
+3.71095 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 6 days ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: CMS Full Stack Developer
+Skillsoft Software Services
+3.482 Reviews
+1 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 6 days ago
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #2
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Python Engineer
+ti Steps
+4.317 Reviews
+1 - 4 years
+2-4 Lacs P.A.
+Bengaluru, Hyderabad, Chennai
+Send me jobs like this
+Posted: Just now
+Openings: 1
+Applicants: Less than 10
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #3
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: Software Engineer - Data Engineering/Generative AI
+Wells Fargo
+3.77711 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Automation Engineer
+Amgen Inc
+3.238 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Openings: 1
+Applicants: 44
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #5: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Software Engineer II
+Bristol Myers Squibb
+3.6223 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 1
+Applicants: 18
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Full Stack Developer (Python + React.js)
+Concoct Human Resource Practitioners
+1 - 3 years
+Not Disclosed
+Bengaluru, Hyderabad
+Time and Venue
+7th October - 16th October , 9.30 AM - 5.30 PM
+Address: 679, Elite Plaza, #302, 3rd floor #6-3, 302, Durga Nagar Colony, Somajiguda, Hyderabad, Telangana 500082 (View on map)
+Contact - Siddharth  ( 9704344092 )
+Send me jobs like this
+Posted: 3 days ago
+Openings: 3
+Applicants: 100+
+Save
+I am interested
+❌ No Apply button found.
+❌ Failed to apply job #7
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Python-Fullstack Developer
+Plexcel Info Systems
+2 - 5 years
+Not Disclosed
+Bengaluru, Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Data Engineer(Python with Gen AI)
+Capgemini
+3.748828 Reviews
+2 - 6 years
+Not Disclosed
+Bengaluru, Hyderabad, Pune
+Send me jobs like this
+Posted: 3 weeks ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: AI Fullstack Engineer (Ruby and Python)
+Infraveo Technologies
+2 - 6 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Python Developer
+Apptad Inc
+2.445 Reviews
+2 - 4 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Python Developer_ P
+Infosys
+3.544911 Reviews
+2 - 7 years
+Not Disclosed
+Hybrid
+Bengaluru, Hyderabad, Pune
+Prefers women candidates
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1500
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #12
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Python Developer
+Total Shape
+1 - 4 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Python Developer
+The It Mind Services
+4.216 Reviews
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Sr Python Developer
+Zuree Telecom
+3.317 Reviews
+2 - 8 years
+Not Disclosed
+Bengaluru, Noida, Mumbai, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: PYTHON DEVELOPER
+Contingent Professionals
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Python Expert
+HashedIn
+4.1504 Reviews
+2 - 6 years
+Not Disclosed
+Bengaluru, Hyderabad, Pune, Gurugram
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Python Django Developer
+Stratonik
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: Python developer with React.js
+Stratonik
+2 - 6 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Full-Stack Developer (React & Python/Django)
+Teknosys
+2 - 6 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 4
+
+🔹 Processing page 4 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Python , Pytest Automation
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Python Developer
+Appzlogic
+3.339 Reviews
+0 - 3 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Python Developer
+Prolegion
+4.58 Reviews
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: Python Developer
+Navariti
+0 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 day ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Python Developer
+Where2invest Limited
+2 - 4 years
+4-6.5 Lacs P.A.
+Hyderabad( Kondapur )
+Time and Venue
+9th October , 9.30 AM - 5.30 PM
+Asian Suncity, B Block, 10th Floor, 1002, behind Sharath City Mall, Kondapur, Hyderabad.
+Contact - Niharika ( 9281021159 )
+Send me jobs like this
+Posted: 1 day ago
+Openings: 1
+Applicants: 50+
+Applied
+You have already applied
+❌ No Apply button found.
+❌ Failed to apply job #5
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: PYTHON AUTOMATION TESTER
+Diverse Lynx
+3.5361 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Junior Python Developer
+University Of Cambridge
+4.96 Reviews
+1 - 3 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Python developer
+Riveredge Analytics
+2.26 Reviews
+1 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Product Engineer (Python)
+Loyalty Juggernaut
+3.371 Reviews
+1 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: Python Backend
+Fusion Plus Solutions Inc
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Automation Testing Python Professional
+The It Mind Services
+4.216 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Python Developer - Third Party payroll
+Crisil
+3.51799 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #12
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: PYTHON DEVELOPER
+Intelgic Technologies
+3.014 Reviews
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Python Developer
+Weboccult Technologies
+2.813 Reviews
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Python + Spark/Scala
+Krazy Mantra It
+3.387 Reviews
+1 - 4 years
+Not Disclosed
+Bengaluru, Noida, Mumbai, Hyderabad, Pune, Chennai, Gurugram
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Python Developer
+Synergyworks
+4.46 Reviews
+1 - 2 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Junior Backend Engineer - Python
+Tinvio Digital Services
+4.02 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 day ago
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #17
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Junior Python Developers
+Cal4care
+2.85 Reviews
+2 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: Python Developer
+MWB Technologies
+2.110 Reviews
+2 - 6 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Python Engineer
+Scalereal Technologies
+4.315 Reviews
+0 - 5 years
+Not Disclosed
+Bengaluru, Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 5
+
+🔹 Processing page 5 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Python Developer
+PatternLab.AI
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Openings: 1
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #1
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Jr.Python developer
+P99soft
+4.635 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Software Engineer III - Python, Databricks, AWS
+JPMorgan Chase Bank
+3.87148 Reviews
+Employees' choice
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Openings: 1
+Applicants: 48
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: Software Engineer II - (Python/Java/Scala with Spark, AWS)
+JPMorgan Chase Bank
+3.87148 Reviews
+Employees' choice
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: WLAN Python (Sniffer)
+Kiash Solution
+2 - 6 years
+6-8 Lacs P.A.
+Hybrid
+Hyderabad
+Send me jobs like this
+Posted: 6 days ago
+Openings: 1
+Applicants: 35
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #5
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Python Developer - Third Party payroll
+Crisil
+3.51799 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 1 week ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Python Developer
+Massmutual Global Business Services India
+3.9213 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Python Professional
+Diverse Lynx
+3.5361 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Python , Pytest Automation
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: Python Scripting, Pytest Framework
+Fusion Plus Solutions Inc
+2 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Core Python
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Python Full Stack Developer with Angular and AWS
+Appsierra Group
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #12: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Sciative Solutions Data Engineer Python/Spark
+Sciative Solutions
+4.1104 Reviews
+2 - 4 years
+Not Disclosed
+Mumbai, Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #13
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Python Developer
+360DigiTMG
+3.991 Reviews
+2 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: PYTHON DEVELOPER
+Diverse Lynx
+3.5361 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3 weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Python Developer
+Highradius
+2.81569 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3 weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Python Developer
+Prudent Globaltech Solutions
+3.64 Reviews
+1 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3 weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Backend Developer (Go/Python)
+Algoleap Technologies
+4.2105 Reviews
+1 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3 weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: Oliver Wyman - Senior Data Analytics Specialist (Python & SQL)
+Mercer
+3.61481 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad, Kondapur
+Send me jobs like this
+Posted: 3+ weeks ago
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #19
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Junior Python Automation Test engineer
+P99soft
+4.635 Reviews
+0 - 2 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 6
+
+🔹 Processing page 6 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Junior QA Engineer ( Python )
+Appstek Corp
+3.826 Reviews
+0 - 2 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Python automation engineer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Python Developer Multimedia Validation
+Univision Technology Consulting
+2.815 Reviews
+2 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 1
+Applicants: 32
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: Python Developer (Job ID: FLD- 021)
+Magnarus Technologies
+1 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+0 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #5: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Python
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Python Developer - RE
+GENZEON (INDIA) PRIVATE LIMITED
+3.8173 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Python Developer
+Micro1
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 43
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: Python Developer
+Saven Technologies
+3.145 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Python, ReactJS
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #12: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Digital & AI/ML Engineer (Python, R/Java)
+Franklin templeton asset management (india)pvt
+4.0742 Reviews
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Python Developer
+Diverse Lynx
+3.5361 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Python,Sql,Postgressql
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 17
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: LLM/Python AI developer
+Algoleap Technologies
+4.2105 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Snowflake, Python, Airflow, SQL
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: spark,python(pyspark developer)
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Python Developer
+Diverse Lynx
+3.5361 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 7
+
+🔹 Processing page 7 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Python Automation Engineer
+Amgen Inc
+3.238 Reviews
+1 - 9 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 46
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Python Intern
+Zestiot Technologies
+2.926 Reviews
+0 - 2 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Jr Python Developer Solution
+Exponential Ai Software Services
+4.93 Reviews
+1 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #5: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Python/SQL Professional
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Python with Django and API development
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Python with Django and API development
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: Python Developer
+Micro1
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Python, Machine Learning/AI Software Engineer
+Banyan Solutions
+2.02 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #12: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Python Developer
+Intersources Inc
+3.46 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Design, Build and Development of Python Professional
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Python Developer
+Adtcore
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Spark, Python, pyspark
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: Python with SQL specialist
+Diverse Lynx
+3.5361 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Data Engineer - Python, Airflow, Snowflake
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 8
+
+🔹 Processing page 8 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+0 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Python Developer
+Abcloud Tech
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Python automation, Big Query, Hadoop, GCP Professional
+Fusion Plus Solutions Inc
+0 - 2 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Python Instructor (Freelancer)
+Jagsar
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #5: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Python Developer
+Virtue Software Technologies
+3.23 Reviews
+0 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Python, OOPS
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: Python, React JS Professional
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Python Developer
+Sledding Technologies
+4.14 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Data Engineer - Python / Pandas
+Speriti Solutions
+4.36 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #12: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Python, OOPS
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Python Developer (Remote)
+Mindtris
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Python,Sql,Postgressql
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Senior Python Software Engineer
+Zeta Global
+3.5134 Reviews
+1 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Sr Python Developer ( VE )
+Zuree Telecom
+3.317 Reviews
+2 - 7 years
+Not Disclosed
+Mumbai, Hyderabad, New Delhi, Pune
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: Python, Machine Learning/AI Software Engineer
+Banyan Solutions
+2.02 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Pyspark/ Python developer
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 9
+
+🔹 Processing page 9 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: Python Developer
+Abbineni Business Management
+2.04 Reviews
+0 - 2 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Python ROS Developer
+Xmachines
+5.02 Reviews
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: QA Automation Engineer - Python
+Effiasoft
+3.746 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: python development Professional
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Python Developer
+Divimaxim Technologies
+4.712 Reviews
+2 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #5: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Python Professional
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Python Developer requirements
+Fusion Plus Solutions Inc
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Python ROS Developer
+Xmachines
+5.02 Reviews
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Python Developer
+Jala Academy
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: python developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: Python,Django
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Python Developer
+Diverse Lynx
+3.5361 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #12: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Data Engineer, Airflow, Python, SQL
+Fusion Plus Solutions Inc
+1 - 2 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Python Developer
+Diverse Lynx
+3.5361 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Python + Gen AI
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #16: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Python (NumPy
+Fusion Plus Solutions Inc
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: Python Developer
+Fusion Plus Solutions Inc
+2 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Python, Gen AI, AIML
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+⚠️ Next button click intercepted, using JS click
+➡️ Navigated to page 10
+
+🔹 Processing page 10 of 10
+📢 Total loaded job cards: 20
+🟢 Opened job #1
+👉 Switched to new job tab
+Visible text: python,pyspark
+Fusion Plus Solutions Inc
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 23
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #1: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #2
+👉 Switched to new job tab
+Visible text: Software Development Test Engineer
+Amgen Inc
+3.238 Reviews
+1 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3 weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #2: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #3
+👉 Switched to new job tab
+Visible text: Web and Data Engineer
+Revenuemantra Digital Media
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #3: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #4
+👉 Switched to new job tab
+Visible text: AI & Automation Solutions Engineer
+Amgen Inc
+3.238 Reviews
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #4: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #5
+👉 Switched to new job tab
+Visible text: Software Development Engineer
+Evigway Technologies
+4.15 Reviews
+2 - 7 years
+10-12 Lacs P.A.
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 5
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #5
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #6
+👉 Switched to new job tab
+Visible text: Graphics Compiler Automation engineer
+Qualcomm
+3.71095 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #6: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #7
+👉 Switched to new job tab
+Visible text: Software Development Engineer, EU 3P (MFN) Acceleration
+Amazon
+4.028855 Reviews
+Employees' choice
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 31
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #7: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #8
+👉 Switched to new job tab
+Visible text: Software Engineer / Applications Developer / Data Engineer
+Uber
+4.2950 Reviews
+1 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #8: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #9
+👉 Switched to new job tab
+Visible text: Software Development Engineer - Test ii
+Amgen Inc
+3.238 Reviews
+1 - 9 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #9: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #10
+👉 Switched to new job tab
+Visible text: Software Engineer
+Tech Tammina
+3.352 Reviews
+1 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #10: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #11
+👉 Switched to new job tab
+Visible text: AI Automation Engineer
+Pronix Inc
+2.211 Reviews
+2 - 6 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #11: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #12
+👉 Switched to new job tab
+Visible text: Various opening For PwD (Person with Disability)
+Giftabled Innoventures
+0 - 5 years
+15-30 Lacs P.A.
+Bengaluru, Hyderabad, Delhi / NCR
+Prefers differently-abled candidates
+Send me jobs like this
+Posted: 1 day ago
+Openings: 100
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #12
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #13
+👉 Switched to new job tab
+Visible text: Software Engineer - Systems (Platform)
+Nasuni
+1 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 50+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #13: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #14
+👉 Switched to new job tab
+Visible text: Software Engineer
+Tapad
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #14: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #15
+👉 Switched to new job tab
+Visible text: Data Engineer
+Thoughtgenesis
+3.85 Reviews
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #15: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #16
+👉 Switched to new job tab
+Visible text: Software Engineer - Azure Data Factory (ADF)
+Yash Technologies
+3.71866 Reviews
+2 - 4 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Applicants: 100+
+Save
+Apply
+✅ Direct Apply button clicked successfully.
+✅ Applied for job #16
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #17
+👉 Switched to new job tab
+Visible text: Senior AI Developer
+Accellor Inc
+3.212 Reviews
+2 - 7 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 2 weeks ago
+Openings: 1
+Applicants: 49
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #17: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #18
+👉 Switched to new job tab
+Visible text: Associate Software Engineer
+Qualminds
+4.424 Reviews
+0 - 2 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #18: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #19
+👉 Switched to new job tab
+Visible text: Jr. Software Developer
+Othain Software Services India
+2.967 Reviews
+1 - 3 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Openings: 1
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #19: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+🟢 Opened job #20
+👉 Switched to new job tab
+Visible text: Engineer - Audio Systems Machine Learning Engineer
+Qualcomm
+3.71095 Reviews
+1 - 5 years
+Not Disclosed
+Hyderabad
+Send me jobs like this
+Posted: 3+ weeks ago
+Applicants: 100+
+Save
+Apply on company site
+⚠️ Skipping: Apply on company site button found.
+⚠️ Skipped job #20: Apply on company site
+⬅️ Returned to main tab
+
+📢 Total loaded job cards: 20
+✅ Reached the last page or finished all requested pages.
+Total jobs Notifications Available in the page: 0
+Total jobs tried for apply: 0
+------------------------------------------------------------- Captured log call --------------------------------------------------------------
+INFO     pages.login_page:login_page.py:26 Navigated to https://www.naukri.com/
+INFO     pages.login_page:login_page.py:27 Page Title: Jobs - Recruitment - Job Search - Employment - Job Vacancies - Naukri.com
+INFO     pages.login_page:login_page.py:31 Clicked on Login button
+INFO     pages.login_page:login_page.py:34 Login modal is visible
+INFO     pages.login_page:login_page.py:38 Username Entered Successfully....
+INFO     pages.login_page:login_page.py:43 Username Entered Successfully....
+INFO     pages.login_page:login_page.py:48 Submitted login form
+INFO     pages.search_page:search_page.py:34 Skill/Company/Designation Entered Successfully...
+INFO     pages.search_page:search_page.py:43 Experience set Successfully...
+INFO     pages.search_page:search_page.py:50 Entered Location Successfully...
+INFO     pages.search_page:search_page.py:54 Search Button Clicked Successfully...
+========================================================== short test summary info ===========================================================
+FAILED tests/test_searchAndApply.py::test_profile_navigation - AssertionError: ❌ No jobs were applied successfully. Check ApplySearch or ClickDirectApply logic.
+======================================================= 1 failed in 1903.12s (0:31:43) =======================================================
