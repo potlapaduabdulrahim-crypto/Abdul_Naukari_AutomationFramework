@@ -108,3 +108,10 @@
 2025-12-11 17:10:01,625 - test_searchAndApply - INFO - Total jobs found across 1 pages: 22
 2025-12-11 17:10:01,625 - test_searchAndApply - INFO - Total jobs tried to apply: 20
 2025-12-11 17:10:01,625 - test_searchAndApply - INFO - Total jobs successfully applied: 7
+2025-12-11 17:23:39,378 - pages.login_page - INFO - Navigated to https://www.naukri.com/
+2025-12-11 17:23:39,403 - pages.login_page - INFO - Page Title: Jobs - Recruitment - Job Search - Employment - Job Vacancies - Naukri.com
+2025-12-11 17:23:44,658 - pages.login_page - INFO - Clicked on Login button
+2025-12-11 17:23:46,693 - pages.login_page - INFO - Login modal is visible
+2025-12-11 17:23:48,930 - pages.login_page - INFO - Username Entered Successfully.... 
+2025-12-11 17:23:51,189 - pages.login_page - INFO - Username Entered Successfully....
+2025-12-11 17:23:59,344 - pages.login_page - INFO - Submitted login form
