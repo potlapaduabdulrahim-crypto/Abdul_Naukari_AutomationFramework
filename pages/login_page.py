@@ -26,27 +26,76 @@ class LoginPage:
         self.driver.get(config.BASE_URL)
         logger.info(f"Page Title: {self.driver.title}")
 
-        # Wait for page load
+        # --- Wait until the page is fully loaded ---
         WebDriverWait(self.driver, 30).until(
             lambda d: d.execute_script("return document.readyState") == "complete"
         )
 
-        # Retry finding login button up to 3 times
-        for attempt in range(3):
+        logger.info("Page fully loaded.")
+
+        # --- MULTI-LOCATOR LOGIN HANDLING FOR ALL NAUKRI UI VARIANTS ---
+        locators = [
+            (By.ID, "login_Layer"),  # OLD UI (India region)
+            (By.XPATH, "//div[contains(text(),'Login')]"),  # NEW UI top login button
+            (By.XPATH, "//a[contains(text(),'Login')]"),  # Dropdown link inside menu
+            (By.XPATH, "//span[contains(text(),'Login')]"),  # Mobile/tablet UI
+            (By.XPATH, "//button[contains(text(),'Login')]"),
+            (By.XPATH,"(//a[normalize-space()='Login'])[1]"),
+            (By.CSS_SELECTOR,"#login_Layer")
+            # Sometimes a button
+        ]
+
+        clicked = False
+
+        for locator in locators:
             try:
-                login_btn = WebDriverWait(self.driver, 10).until(
-                    EC.element_to_be_clickable((By.XPATH, '//*[@id="login_Layer"]'))
+                logger.info(f"Trying login locator: {locator}")
+                login_btn = WebDriverWait(self.driver, 12).until(
+                    EC.element_to_be_clickable(locator)
                 )
                 login_btn.click()
+                logger.info(f"Clicked login button using locator: {locator}")
+                clicked = True
                 break
-            except:
-                logger.warning(f"Login button not found. Retry {attempt + 1}/3")
-                time.sleep(2)
-        else:
-            raise Exception("Login button not clickable after retries")
+            except Exception as e:
+                logger.warning(f"Locator failed: {locator} | Error: {e}")
 
-        # Wait for login modal
-        WebDriverWait(self.driver, 20).until(
-            EC.visibility_of_element_located(
-                (By.XPATH, "//input[@placeholder='Enter your active Email ID / Username']"))
+        if not clicked:
+            raise Exception("❌ Could not find ANY login button on Naukri UI — UI variant mismatch.")
+
+        # --- Wait for login modal to appear ---
+        try:
+            username_input = WebDriverWait(self.driver, 20).until(
+                EC.presence_of_element_located(
+                    (By.XPATH, "//input[@placeholder='Enter your active Email ID / Username']")
+                )
+            )
+            logger.info("Login modal visible.")
+        except:
+            raise Exception("❌ Login modal did NOT appear after clicking login button.")
+
+        # --- Fill username ---
+        username_input.clear()
+        username_input.send_keys(config.USERNAME)
+        logger.info("Username entered.")
+
+        # --- Fill password ---
+        password_input = WebDriverWait(self.driver, 15).until(
+            EC.presence_of_element_located(
+                (By.XPATH, "//input[@placeholder='Enter your password']")
+            )
         )
+        password_input.clear()
+        password_input.send_keys(config.PASSWORD)
+        logger.info("Password entered.")
+
+        # --- Click Login button inside modal ---
+        login_submit = WebDriverWait(self.driver, 15).until(
+            EC.element_to_be_clickable((By.XPATH, "//button[text()='Login']"))
+        )
+        login_submit.click()
+        logger.info("Login button clicked inside modal.")
+
+        # --- Wait after login ---
+        time.sleep(5)
+        logger.info(f"Final title after login attempt: {self.driver.title}")
